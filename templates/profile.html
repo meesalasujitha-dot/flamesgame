@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Profile</title>
+<link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+
+<body>
+
+<h2>User Profile</h2>
+
+<img src="/static/uploads/{{user.profile_pic}}" width="120">
+
+<p>Username : {{user.username}}</p>
+
+<form method="POST" enctype="multipart/form-data">
+
+<input type="file" name="photo">
+
+<button type="submit">Upload Photo</button>
+
+</form>
+
+<a href="/game">Back</a>
+
+</body>
+</html>

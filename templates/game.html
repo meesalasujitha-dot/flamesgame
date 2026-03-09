@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>FLAMES Game</title>
+<link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+
+<body>
+
+<div class="topmenu">
+<a href="/profile">Profile</a>
+<a href="/history">Game History</a>
+<a href="/logout">Logout</a>
+</div>
+
+<h1>FLAMES Game</h1>
+
+<div class="box">
+
+<form method="POST">
+
+<input type="text" name="person1" placeholder="Person 1 Name">
+
+<input type="text" name="person2" placeholder="Person 2 Name">
+
+<button type="submit">Check</button>
+
+<button type="reset">Clear</button>
+
+</form>
+
+{% if result %}
+
+<h2>Result : {{result}}</h2>
+
+{% endif %}
+
+</div>
+
+</body>
+</html>

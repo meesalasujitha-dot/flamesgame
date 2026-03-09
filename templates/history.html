@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Game History</title>
+<link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+
+<body>
+
+<h2>Game History</h2>
+
+<table>
+
+<tr>
+<th>Person1</th>
+<th>Person2</th>
+<th>Result</th>
+<th>Date</th>
+</tr>
+
+{% for game in games %}
+
+<tr>
+<td>{{game.person1}}</td>
+<td>{{game.person2}}</td>
+<td>{{game.result}}</td>
+<td>{{game.date}}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+<a href="/game">Back</a>
+
+</body>
+</html>
